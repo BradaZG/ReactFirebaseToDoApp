@@ -12,6 +12,7 @@ function App() {
     setCounter(counter - 1);
   }
 
+  //React Hooks
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
   const [counter, setCounter] = useState(0);
