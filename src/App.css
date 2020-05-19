@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+body {
+    background-color: #354649;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    margin: 10px auto 10px auto;
+    width: 60%;
+    height: 97vh;
+    border: 2px solid #354649;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-image: linear-gradient(yellow, red);
+    overflow: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app::-webkit-scrollbar {
+  width: 0 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    width: 37%;
+    min-width: 140px;
+    height: 25px;
+    font-size: 1.5vmin;
+    padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    font-size: 6.5vmin;
+    color: #FFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+    font-size: 2.5vmin;
+}
+
+button {
+    color: #E0E7E9;
+}
+
+.buttonAdd {
+    border-radius: 10px;
+    height: 35px;
+    width: 60px;
+    background-color: #6C7A89;
 }

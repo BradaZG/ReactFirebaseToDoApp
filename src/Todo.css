@@ -1,0 +1,32 @@
+.todo {
+  background-color: #354649;
+  width: 80%;
+  height: 65px;
+  margin: 0 auto 10px auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.todo::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+h2 {
+  margin-left: 10%;
+  font-size: 2.1vmin;
+  text-align: left;
+  color: #fff;
+}
+
+.button {
+  margin-right: 10%;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #6c7a89;
+  font-size: 2vmin;
+}
