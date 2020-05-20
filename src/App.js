@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Todo from "./Todo";
 import "./App.css";
+import db from "./firebase";
 
 function App() {
   function deleteTodo(e) {
@@ -17,9 +18,19 @@ function App() {
   const [input, setInput] = useState("");
   const [counter, setCounter] = useState(0);
 
+  useEffect(() => {
+    db.collection("todos").onSnapshot((snapshot) => {
+      setTodos(snapshot.docs.map((doc) => doc.data().title));
+    });
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTodos([input.toUpperCase(), ...todos]);
+    //setTodos([input.toUpperCase(), ...todos]);
+    db.collection("todos").add({
+      title: input,
+    });
+
     setInput("");
     setCounter(counter + 1);
   };
